@@ -1,0 +1,343 @@
+---
+title: "Data Science  para Economía y Negocios - Laboratorio 1"
+author: "Javier Fernández"
+date: "17/3/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+ 
+## Lab 01: Introducción a R
+
+Contenidos:
+
+- Presentación: <b>The R Project for Statistical Computing</b>
+
+- Introducción <b>RStudio</b> y <b>RStudio Cloud</b>
+
+- Aprende una nueva lengua, aprende R!!
+
+    - Codificación orientada al objeto - tipos de objetos
+    - Sintaxis
+    
+- Desmenuzando un código
+
+- Tutoriales de R on-line: DataCamp!
+
+## ¿Qué es R?
+
+R es un software libre para la computación estadística y la generación de gráficos.
+
+Cuando se aprende un nuevo idioma, las personas debemos aprender varias cosas como:
+
+    - Reglas de escritura
+    - Gramática
+    - Pronunciación
+    - Lectura, etc
+    
+De la misma forma, para aprender R, ud. debe aprender estas mismas reglas.
+
+## ¿Qué es R?
+
+```{r, echo=FALSE, out.width = '100%', fig.align='center'}
+knitr::include_graphics("paginaR.png")
+```
+
+## ¿Qué es R-Studio?
+
+- R-Studio es un software IDE (Integrated Development Environment)
+
+- Plataforma amigable ara la programación en R 
+
+```{r, echo=FALSE, out.width = '80%', fig.align='center'}
+knitr::include_graphics("rstudio.png")
+```
+
+## ¿Qué es R-Studio Cloud?
+
+- Una versión alojada de R-Studio en la nube
+
+- No es necesario instalar software ni configurar nada desde el PC
+
+- Solo deben crearse una cuenta y comenzar a utilizarlo!
+
+## Programación basada en objetos
+
+La programación basada en el objeto se enfoca en:
+
+- Reunir datos del mundo y clasificarlo en objetos
+
+- Utilizar esos objetos en distintas formas (funciones) para lograr extraer información relevante
+
+Ejemplo:
+
+- ¿Cómo sería la programación basada en el objeto de 3 tipos de perros?
+
+    - Step1: ¿Cuál es el objeto?
+    - Step2: ¿Cuáles son los atributos que definen el objeto?
+    - Step3: ¿Qué cosas se pueden hacer en el objeto?
+
+## Programación basada en objetos
+
+```{r, echo=FALSE, out.width = '100%', fig.align='center'}
+knitr::include_graphics("perros.png")
+```
+
+## Lenguaje - Sintaxis 1: Comandos 
+
+¿Cómo se escribe en R?
+
+- Comando: orden de un usuario que R ejecuta
+
+    - Uno puede ejecutar un comando directamente en la Consola de R o bien en un Script (Source)
+    
+- R es case-sensitive, en general cualquier símbolo del alfabeto puede ser usado para nombrar un objeto
+
+- El signo `<-` asigna a un valor a un objeto
+
+## Lenguaje - Sintaxis 1: Comandos 
+
+- Un comando puede:
+
+    - Correr algo en R (no crear nada)
+    - Crear un objeto
+    - Manipular un objeto
+
+- En un script
+
+    - Un comando por línea (recomendado)
+    - Varios comandos por línea separados por ";"
+
+## Lenguaje: Asignación y Objetos
+
+¿Cómo se escribe en R?
+
+- R se basa en data structres que son distintas formas de almacenar datos en objetos de distinta clase
+
+- La creación de un objeto es la escencia de la programación en R y se hace a través de asignar valores a letras
+
+```{r pressure, echo=FALSE, out.width = '60%', fig.align='center'}
+knitr::include_graphics("Captura.png")
+```
+
+## Lenguaje - Sintaxis 2: Scripts
+
+¿Cómo se escribe en R?
+
+- Un script es una colección de órdenes ue un usuario le da a R para que se ejecuten
+
+- Es una lista de tareas que se ejecutaran de forma cronológica
+
+- Los scripts contienen:
+
+    - Objetos, funciones y paquetes
+    
+- Reproductibilidad:
+
+    - Capacidad de replicar un resultado o proceso. R es súper bueno en esto!!
+
+## Lenguaje - Sintaxis 2: Scripts
+
+Partes de un script:
+
+    - Metadatos: Información - ¿Qué hace el script? ¿Cuándo?
+    - Cargado de paquetes y seteo de directorios
+    - Lista de comandos 
+    - Guardar resultados
+
+## Lenguaje - Sintaxis 3: Objetos
+
+Tipos de objetos en R
+
+- Un objeto guarda datos, en el mundo hay múltiples tipos de datos, por ende hay muchos tipos de objetos!
+
+- Los más comunes son:
+
+```{r, echo=FALSE, out.width = '100%', fig.align='center'}
+knitr::include_graphics("comandos.png")
+```
+
+## Lenguaje - Sintaxis 3: Objetos
+
+Partes de un objeto:
+
+- Elementos: contenidos del objeto
+
+- Atributos: otras características de los elementos del objeto
+
+Dimensión de un objeto:
+
+- Formas en la que los elementos se organizan dentro del objeto
+
+    - Unidimensional - parámetros, vectores
+    - Bidimensional - matrices, dataframes
+    - Tridimensionales - arrys
+    - N-dimensionales - listas
+
+## Lenguaje - Sintaxis 4: Funciones
+
+Funciones en R
+
+- Una función es un conjunto de comandos compactados en un objeto
+
+- Componentes:
+
+    - Nombre
+    - Paréntesis
+    - Argumentos
+```{r, echo=FALSE, out.width = '50%', fig.align='right'}
+knitr::include_graphics("funcion.png")
+```
+
+## Lenguaje - Sintaxis 4: Funciones
+
+```{r, echo=FALSE, out.width = '50%', fig.align='center'}
+knitr::include_graphics("funcion2.png")
+```
+
+```{r, echo=FALSE, out.width = '50%', fig.align='center'}
+knitr::include_graphics("creacion.png")
+```
+
+## Lenguaje - Sintaxis 4: Funciones
+
+- Las funciones pueden servir como función última o como parte de un objetivo final
+- Se pueden hacer objetos en base de funciones o como producto de ellas 
+
+```{r, echo=FALSE, out.width = '100%', fig.align='center'}
+knitr::include_graphics("creacion2.png")
+```
+
+## Lenguaje - Sintaxis 5: Indexing
+
+Indexar en R
+
+¿Cómo busco/llamo un elemnto(s) específico dentro de un objeto?
+
+- Respuesta: 2 Opciones
+
+    - Por posición (manual)
+    - Por condición (R busca la posición del elemento que cumple la condición)
+    
+- Sintaxis:
+
+    - Indexar requiere el uso de corchetes [] justo después de un objeto
+    - Si el objeto tiene más de una dimensión, se añade un "," para separar cada dimensión
+   
+## Lenguaje - Sintaxis 5: Indexing
+
+Indexando un objeto unidimensional
+```{r, echo=TRUE}
+A<-c(1,2)
+A #entrega todos los elementos de A
+```
+
+## Lenguaje - Sintaxis 5: Indexing
+
+```{r, echo=FALSE, out.width = '40%', fig.align='center'}
+knitr::include_graphics("indexar2.png")
+```
+
+```{r, echo=TRUE}
+A[1] #entrega el primer elemento de A
+```
+
+```{r, echo=TRUE}
+A[2] #entrega el segundo elemento de A
+```
+
+## Lenguaje - Sintaxis 5: Indexing
+
+```{r, echo=FALSE, out.width = '40%', fig.align='center'}
+knitr::include_graphics("indexar2.png")
+```
+
+```{r, echo=TRUE}
+A[-1] #entrega todos los elementos de A, menos el primero
+```
+
+```{r, echo=TRUE}
+A[1:2] #entrega el primer elemento de A hasta el segundo elemnto de A
+```
+
+## Lenguaje - Sintaxis 5: Indexing
+
+Indexando un objeto multidimensional
+```{r, echo=TRUE}
+B<-matrix(1:4,2,2)
+B #entrega todos los elementos de B
+```
+
+```{r, echo=TRUE}
+B[1,2] 
+#entrega el elemento que se encuentra en la primera fila
+#en la segunda columna
+```
+
+## Lenguaje – Sintaxis 6: Logical vectors
+
+¿Cómo busco/llamo un elemnto(s) específico dentro de un objeto?
+
+- Respuesta: 2 Opciones
+
+    - Por posición (manual)
+    - Por condición (R busca la posición del elemento que cumple la condición)
+    
+## Lenguaje – Sintaxis 6: Logical vectors
+
+Por condición
+
+Ejemplo 1:
+
+- Objeto: de un conjunto de números
+
+- Pregunta: ¿Cuáles son los número mayores a 3?
+
+Ejemplo 2: 
+
+- Objeto: Base de datos Asistentes del CEPR Workshop Series
+
+- Pregunta: ¿Cuáles de ellos son de ing.civil?
+
+## Lenguaje – Sintaxis 6: Logical vectors
+
+Ejemplo 1: 
+
+Indexando objetos unidimensionales usando operaciones lógicas
+
+```{r, echo=TRUE}
+z<-c(3,2.1,4.55,3,9)
+z
+```
+Dime para cada elemento dentro de `z` si cumple la condición: el elemento es mayor o igual a 3
+```{r, echo=TRUE}
+z>=3
+```
+
+## Lenguaje – Sintaxis 6: Logical vectors
+
+Crear un nuevo ojbeto con todos los elementos de `z` que cumplan con la condición de ser mayores o iguales a 3
+
+```{r, echo=TRUE}
+q<-z[z>=3]
+q
+```
+
+## Lenguaje – Sintaxis 7: Object Manipulation
+
+Funciones para recordar
+
+- `class(x)`: revela el tipo de objeto e indirectamente dice que se puede hacer con él
+- `lenght(x)`: revela la longitud de un objeto unidimensional
+- `dim(X)`: revela la dimensión de un objeto n-dimensional
+- `names(x)`: revela los nombres (si existen) de los elemntos de un objeto
+- `attributes(x)`: revela todos los atributos de un objeto
+- `rm(x)`: limina un objeto de la memoria de R, en una sesión
+- `ls(x)`: revela todos los objetos en la memoria de R en una sesión específica
+
+
+
+
+
