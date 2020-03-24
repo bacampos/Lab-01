@@ -318,7 +318,7 @@ z>=3
 
 ## Lenguaje – Sintaxis 6: Logical vectors
 
-Crear un nuevo ojbeto con todos los elementos de `z` que cumplan con la condición de ser mayores o iguales a 3
+Crear un nuevo objeto con todos los elementos de `z` que cumplan con la condición de ser mayores o iguales a 3
 
 ```{r, echo=TRUE}
 q<-z[z>=3]
