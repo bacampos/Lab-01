@@ -318,7 +318,7 @@ z>=3
 
 ## Lenguaje – Sintaxis 6: Logical vectors
 
-Crear un nuevo ojbeto con todos los elementos de `z` que cumplan con la condición de ser mayores o iguales a 3
+Crear un nuevo objeto con todos los elementos de `z` que cumplan con la condición de ser mayores o iguales a 3
 
 ```{r, echo=TRUE}
 q<-z[z>=3]
@@ -329,12 +329,12 @@ q
 
 Funciones para recordar
 
-- `class(x)`: revela el tipo de objeto e indirectamente dice que se puede hacer con él
+- `class(x)`: revela el tipo de objeto e indirectamente dice qué se puede hacer con él
 - `lenght(x)`: revela la longitud de un objeto unidimensional
 - `dim(X)`: revela la dimensión de un objeto n-dimensional
-- `names(x)`: revela los nombres (si existen) de los elemntos de un objeto
+- `names(x)`: revela los nombres (si existen) de los elementos de un objeto
 - `attributes(x)`: revela todos los atributos de un objeto
-- `rm(x)`: limina un objeto de la memoria de R, en una sesión
+- `rm(x)`: elimina un objeto de la memoria de R, en una sesión
 - `ls(x)`: revela todos los objetos en la memoria de R en una sesión específica
 
 
